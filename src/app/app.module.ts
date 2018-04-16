@@ -4,17 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ScoresComponent } from './scores/scores.component';
+import {ScoreService} from './score.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScoresComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ScoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
