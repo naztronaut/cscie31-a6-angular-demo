@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ScoresComponent } from './scores/scores.component';
 import {ScoreService} from './score.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import {ScoreService} from './score.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ScoreService],
   bootstrap: [AppComponent]
